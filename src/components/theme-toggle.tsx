@@ -32,7 +32,11 @@ export function ThemeToggle() {
   return (
     <motion.button
       onClick={handleThemeChange}
-      className="p-2 rounded-lg glass hover:bg-white/10 transition-all duration-300 text-muted-foreground hover:text-white"
+      className={`p-2 rounded-lg transition-all duration-300 ${
+        theme === 'light'
+          ? 'bg-white/20 shadow-lg border border-white/30 text-gray-800 hover:bg-white/30'
+          : 'glass hover:bg-white/10 text-muted-foreground hover:text-white'
+      }`}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
       aria-label={`Switch to ${getNextTheme()} theme`}
