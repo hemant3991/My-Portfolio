@@ -7,52 +7,45 @@ import { useTheme } from './theme-provider';
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
+  const getThemeIcon = () => {
+    switch (theme) {
+      case 'light': return <Sun className="h-5 w-5" />;
+      case 'dark': return <Moon className="h-5 w-5" />;
+      case 'system': return <Monitor className="h-5 w-5" />;
+      default: return <Sun className="h-5 w-5" />;
+    }
+  };
+
+  const getNextTheme = () => {
+    switch (theme) {
+      case 'light': return 'dark';
+      case 'dark': return 'system';
+      case 'system': return 'light';
+      default: return 'light';
+    }
+  };
+
+  const handleThemeChange = () => {
+    setTheme(getNextTheme());
+  };
+
   return (
-    <motion.div
-      className="flex items-center space-x-1 p-1 glass rounded-lg border border-white/10"
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.3 }}
+    <motion.button
+      onClick={handleThemeChange}
+      className="p-2 rounded-lg glass hover:bg-white/10 transition-all duration-300 text-muted-foreground hover:text-white"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
+      aria-label={`Switch to ${getNextTheme()} theme`}
     >
-      <motion.button
-        onClick={() => setTheme('light')}
-        className={`p-2 rounded-md transition-all duration-200 ${
-          theme === 'light'
-            ? 'bg-primary text-primary-foreground shadow-md'
-            : 'text-muted-foreground hover:text-foreground hover:bg-muted'
-        }`}
-        aria-label="Switch to light theme"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
+      <motion.div
+        key={theme}
+        initial={{ rotate: -90, opacity: 0 }}
+        animate={{ rotate: 0, opacity: 1 }}
+        exit={{ rotate: 90, opacity: 0 }}
+        transition={{ duration: 0.2 }}
       >
-        <Sun className="h-4 w-4" />
-      </motion.button>
-      <motion.button
-        onClick={() => setTheme('dark')}
-        className={`p-2 rounded-md transition-all duration-200 ${
-          theme === 'dark'
-            ? 'bg-primary text-primary-foreground shadow-md'
-            : 'text-muted-foreground hover:text-foreground hover:bg-muted'
-        }`}
-        aria-label="Switch to dark theme"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        <Moon className="h-4 w-4" />
-      </motion.button>
-      <motion.button
-        onClick={() => setTheme('system')}
-        className={`p-2 rounded-md transition-all duration-200 ${
-          theme === 'system'
-            ? 'bg-primary text-primary-foreground shadow-md'
-            : 'text-muted-foreground hover:text-foreground hover:bg-muted'
-        }`}
-        aria-label="Switch to system theme"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        <Monitor className="h-4 w-4" />
-      </motion.button>
-    </motion.div>
+        {getThemeIcon()}
+      </motion.div>
+    </motion.button>
   );
 }

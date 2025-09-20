@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, ArrowDown, Download } from 'lucide-react';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { ThemeToggle } from './theme-toggle';
 
 // Simple Animated Name Component
 function AnimatedName() {
@@ -168,11 +167,42 @@ export function HeroSection() {
             </div>
           </motion.div>
 
-          {/* CTA Buttons */}
+          {/* Social Links - Middle Position */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex justify-center items-center space-x-6 mb-8"
+          >
+            <a
+              href="https://github.com/hemant3991"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-white transition-all duration-300 p-3 rounded-lg glass hover:bg-white/10 glow-primary"
+            >
+              <Github className="h-7 w-7" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/hemant-ahire-5a6505250/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-white transition-all duration-300 p-3 rounded-lg glass hover:bg-white/10 glow-secondary"
+            >
+              <Linkedin className="h-7 w-7" />
+            </a>
+            <a
+              href="mailto:hemantahire3991@gmail.com"
+              className="text-muted-foreground hover:text-white transition-all duration-300 p-3 rounded-lg glass hover:bg-white/10 glow-accent"
+            >
+              <Mail className="h-7 w-7" />
+            </a>
+          </motion.div>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
           >
             <Link
@@ -190,45 +220,6 @@ export function HeroSection() {
             <a href="/resume.pdf" download="Hemant_Ahire_Resume.pdf" className="gradient-secondary px-6 py-4 rounded-lg text-lg font-semibold text-white shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 glow-secondary">
               <Download className="h-5 w-5" />
               Download Resume
-            </a>
-          </motion.div>
-
-          {/* Social Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex justify-center items-center space-x-4 mb-12"
-          >
-            {/* Theme Toggle */}
-            <div className="flex items-center">
-              <span className="text-sm text-muted-foreground mr-2">Theme:</span>
-              <ThemeToggle />
-            </div>
-
-            <div className="h-8 w-px bg-white/20 mx-4"></div>
-
-            <a
-              href="https://github.com/hemant3991"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-white transition-all duration-300 p-2 rounded-lg glass hover:bg-white/10 glow-primary"
-            >
-              <Github className="h-6 w-6" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/hemant-ahire-5a6505250/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-white transition-all duration-300 p-2 rounded-lg glass hover:bg-white/10 glow-secondary"
-            >
-              <Linkedin className="h-6 w-6" />
-            </a>
-            <a
-              href="mailto:hemantahire3991@gmail.com"
-              className="text-muted-foreground hover:text-white transition-all duration-300 p-2 rounded-lg glass hover:bg-white/10 glow-accent"
-            >
-              <Mail className="h-6 w-6" />
             </a>
           </motion.div>
 
