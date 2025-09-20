@@ -32,7 +32,7 @@ export function ThemeToggle() {
   return (
     <motion.button
       onClick={handleThemeChange}
-      className={`p-2 rounded-lg transition-all duration-300 ${
+      className={`p-2 rounded-lg transition-all duration-300 interactive-card ${
         theme === 'light'
           ? 'bg-white/20 shadow-lg border border-white/30 text-gray-800 hover:bg-white/30'
           : 'glass hover:bg-white/10 text-muted-foreground hover:text-white'

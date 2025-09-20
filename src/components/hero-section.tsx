@@ -178,7 +178,7 @@ export function HeroSection() {
               href="https://github.com/hemant3991"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-white transition-all duration-300 p-3 rounded-lg glass hover:bg-white/10 glow-primary"
+              className="text-muted-foreground hover:text-white transition-all duration-300 p-3 rounded-lg glass hover:bg-white/10 glow-primary interactive-card"
             >
               <Github className="h-7 w-7" />
             </a>
@@ -186,13 +186,13 @@ export function HeroSection() {
               href="https://www.linkedin.com/in/hemant-ahire-5a6505250/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-white transition-all duration-300 p-3 rounded-lg glass hover:bg-white/10 glow-secondary"
+              className="text-muted-foreground hover:text-white transition-all duration-300 p-3 rounded-lg glass hover:bg-white/10 glow-secondary interactive-card"
             >
               <Linkedin className="h-7 w-7" />
             </a>
             <a
               href="mailto:hemantahire3991@gmail.com"
-              className="text-muted-foreground hover:text-white transition-all duration-300 p-3 rounded-lg glass hover:bg-white/10 glow-accent"
+              className="text-muted-foreground hover:text-white transition-all duration-300 p-3 rounded-lg glass hover:bg-white/10 glow-accent interactive-card"
             >
               <Mail className="h-7 w-7" />
             </a>
@@ -207,17 +207,17 @@ export function HeroSection() {
           >
             <Link
               href="#projects"
-              className="btn-vibrant px-8 py-4 rounded-lg text-lg font-semibold shadow-lg glow-primary"
+              className="btn-vibrant px-8 py-4 rounded-lg text-lg font-semibold shadow-lg glow-primary interactive-card"
             >
               View My Work
             </Link>
             <Link
               href="#contact"
-              className="glass px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 transition-all duration-300 backdrop-blur-md border border-white/20"
+              className="glass px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 transition-all duration-300 backdrop-blur-md border border-white/20 interactive-card"
             >
               Get In Touch
             </Link>
-            <a href="/resume.pdf" download="Hemant_Ahire_Resume.pdf" className="gradient-secondary px-6 py-4 rounded-lg text-lg font-semibold text-white shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 glow-secondary">
+            <a href="/resume.pdf" download="Hemant_Ahire_Resume.pdf" className="gradient-secondary px-6 py-4 rounded-lg text-lg font-semibold text-white shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 glow-secondary interactive-card">
               <Download className="h-5 w-5" />
               Download Resume
             </a>
@@ -257,7 +257,7 @@ export function HeroSection() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
         onClick={scrollToNext}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-muted-foreground hover:text-white transition-colors animate-bounce glass p-3 rounded-full hover:bg-white/10"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-muted-foreground hover:text-white transition-colors animate-bounce glass p-3 rounded-full hover:bg-white/10 interactive-card"
       >
         <ArrowDown className="h-6 w-6" />
       </motion.button>

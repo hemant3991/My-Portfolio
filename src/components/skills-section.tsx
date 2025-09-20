@@ -16,6 +16,7 @@ import {
   Zap,
   Users
 } from 'lucide-react';
+import { CardTilt } from './card-tilt';
 
 interface Skill {
   name: string;
@@ -117,24 +118,24 @@ export function SkillsSection() {
               <h3 className="text-2xl font-semibold mb-6 text-gradient">Expertise Areas</h3>
               <div className="grid grid-cols-2 gap-4">
                 {categories.map((category, index) => (
-                  <motion.div
-                    key={category}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="glass border border-white/10 rounded-xl p-4 text-center hover:bg-white/5 transition-all duration-300 hover:-translate-y-1 glow-primary"
-                  >
-                    <div className="text-2xl font-bold text-gradient-rainbow mb-1">
-                      {skills.filter(skill => skill.category === category).length}
-                    </div>
-                    <div className="text-sm text-muted-foreground">{category}</div>
-                  </motion.div>
+                  <CardTilt key={category} className="glass border border-white/10 rounded-xl p-4 text-center hover:bg-white/5 transition-all duration-300 hover:-translate-y-1 glow-primary" intensity={8} scale={1.05}>
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                    >
+                      <div className="text-2xl font-bold text-gradient-rainbow mb-1">
+                        {skills.filter(skill => skill.category === category).length}
+                      </div>
+                      <div className="text-sm text-muted-foreground">{category}</div>
+                    </motion.div>
+                  </CardTilt>
                 ))}
               </div>
             </div>
 
             {/* Experience Stats */}
-            <div className="animated-gradient p-6 rounded-xl glow-primary">
+            <CardTilt className="animated-gradient p-6 rounded-xl glow-primary" intensity={5} scale={1.02}>
               <h3 className="text-xl font-semibold mb-4 text-white">Experience Highlights</h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
@@ -154,7 +155,7 @@ export function SkillsSection() {
                   <span className="text-2xl font-bold text-white">100%</span>
                 </div>
               </div>
-            </div>
+            </CardTilt>
           </motion.div>
         </div>
 
@@ -171,13 +172,13 @@ export function SkillsSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#projects"
-              className="btn-vibrant px-8 py-3 rounded-lg font-semibold glow-primary"
+              className="btn-vibrant px-8 py-3 rounded-lg font-semibold glow-primary interactive-card"
             >
               View My Projects
             </a>
             <a
               href="#contact"
-              className="glass px-8 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 backdrop-blur-md border border-white/20"
+              className="glass px-8 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 backdrop-blur-md border border-white/20 interactive-card"
             >
               Let&apos;s Work Together
             </a>

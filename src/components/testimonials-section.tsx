@@ -17,6 +17,7 @@ import {
   Heart
 } from 'lucide-react';
 import { useState } from 'react';
+import { CardTilt } from './card-tilt';
 
 interface Testimonial {
   id: number;
@@ -175,7 +176,7 @@ export function TestimonialsSection() {
             </h3>
 
             <div className="relative group cursor-pointer">
-              <div className="bg-card border border-border rounded-lg p-6 group-hover:shadow-lg transition-all duration-300">
+              <CardTilt className="bg-card border border-border rounded-lg p-6 group-hover:shadow-lg transition-all duration-300" intensity={6} scale={1.03}>
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-primary-foreground font-semibold">
                     {testimonials[currentTestimonial].name.split(' ').map(n => n[0]).join('')}
@@ -208,7 +209,7 @@ export function TestimonialsSection() {
                     {formatDate(testimonials[currentTestimonial].date)}
                   </div>
                 </div>
-              </div>
+              </CardTilt>
 
               {/* Navigation buttons */}
               <button
@@ -253,55 +254,55 @@ export function TestimonialsSection() {
 
             <div className="grid grid-cols-1 gap-4">
               {achievements.map((achievement, index) => (
-                <motion.div
-                  key={achievement.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="group"
-                >
-                  <div className="bg-card border border-border rounded-lg p-4 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-                    <div className="flex items-start gap-4">
-                      <div className={`w-12 h-12 rounded-lg flex items-center justify-center text-white ${getAchievementTypeColor(achievement.type)}`}>
-                        {achievement.icon}
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <h4 className="font-semibold group-hover:text-primary transition-colors">
-                            {achievement.title}
-                          </h4>
-                          {achievement.url && (
-                            <a
-                              href={achievement.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-muted-foreground hover:text-primary transition-colors"
-                            >
-                              <ExternalLink className="h-3 w-3" />
-                            </a>
+                <CardTilt key={achievement.id} className="group" intensity={7} scale={1.04}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                  >
+                    <div className="bg-card border border-border rounded-lg p-4 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                      <div className="flex items-start gap-4">
+                        <div className={`w-12 h-12 rounded-lg flex items-center justify-center text-white ${getAchievementTypeColor(achievement.type)}`}>
+                          {achievement.icon}
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-2">
+                            <h4 className="font-semibold group-hover:text-primary transition-colors">
+                              {achievement.title}
+                            </h4>
+                            {achievement.url && (
+                              <a
+                                href={achievement.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-muted-foreground hover:text-primary transition-colors"
+                              >
+                                <ExternalLink className="h-3 w-3" />
+                              </a>
+                            )}
+                          </div>
+                          <p className="text-sm text-muted-foreground mb-2">
+                            {achievement.description}
+                          </p>
+                          <div className="flex items-center justify-between text-xs text-muted-foreground">
+                            <span className={`px-2 py-1 rounded-full text-white ${getAchievementTypeColor(achievement.type)}`}>
+                              {getAchievementTypeName(achievement.type)}
+                            </span>
+                            <div className="flex items-center gap-1">
+                              <Calendar className="h-3 w-3" />
+                              {formatDate(achievement.date)}
+                            </div>
+                          </div>
+                          {achievement.issuer && (
+                            <div className="text-xs text-muted-foreground mt-1">
+                              Issued by {achievement.issuer}
+                            </div>
                           )}
                         </div>
-                        <p className="text-sm text-muted-foreground mb-2">
-                          {achievement.description}
-                        </p>
-                        <div className="flex items-center justify-between text-xs text-muted-foreground">
-                          <span className={`px-2 py-1 rounded-full text-white ${getAchievementTypeColor(achievement.type)}`}>
-                            {getAchievementTypeName(achievement.type)}
-                          </span>
-                          <div className="flex items-center gap-1">
-                            <Calendar className="h-3 w-3" />
-                            {formatDate(achievement.date)}
-                          </div>
-                        </div>
-                        {achievement.issuer && (
-                          <div className="text-xs text-muted-foreground mt-1">
-                            Issued by {achievement.issuer}
-                          </div>
-                        )}
                       </div>
                     </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                </CardTilt>
               ))}
             </div>
           </motion.div>
@@ -320,7 +321,7 @@ export function TestimonialsSection() {
             { number: '15+', label: 'Certifications', icon: <Award className="h-6 w-6" /> },
             { number: '1', label: 'Hackathon Wins', icon: <Trophy className="h-6 w-6" /> },
           ].map((stat, index) => (
-            <div key={index} className="text-center">
+            <div key={index} className="text-center interactive-card p-4 rounded-lg transition-all duration-300 hover:bg-white/5">
               <div className="text-3xl font-bold text-primary mb-2 flex items-center justify-center gap-2">
                 {stat.icon}
                 {stat.number}

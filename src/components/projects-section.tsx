@@ -16,6 +16,7 @@ import {
   Cloud
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { CardTilt } from './card-tilt';
 
 interface Project {
   id: number;
@@ -178,25 +179,18 @@ export function ProjectsSection() {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 50, rotateX: -15 }}
-              animate={inView ? { opacity: 1, y: 0, rotateX: 0 } : { opacity: 0, y: 50, rotateX: -15 }}
-              transition={{
-                duration: 0.8,
-                delay: index * 0.15,
-                type: 'spring',
-                stiffness: 100
-              }}
-              whileHover={{
-                y: -10,
-                scale: 1.02,
-                rotateX: 5,
-                transition: { duration: 0.2 }
-              }}
-              className="group relative"
-            >
-              <div className="relative bg-card border border-white/10 rounded-xl p-6 h-full overflow-hidden glass hover:bg-white/5 transition-all duration-500">
+            <CardTilt key={project.id} className="group relative" intensity={8} scale={1.05}>
+              <motion.div
+                initial={{ opacity: 0, y: 50, rotateX: -15 }}
+                animate={inView ? { opacity: 1, y: 0, rotateX: 0 } : { opacity: 0, y: 50, rotateX: -15 }}
+                transition={{
+                  duration: 0.8,
+                  delay: index * 0.15,
+                  type: 'spring',
+                  stiffness: 100
+                }}
+                className="relative bg-card border border-white/10 rounded-xl p-6 h-full overflow-hidden glass hover:bg-white/5 transition-all duration-500"
+              >
                 {/* Background gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -303,8 +297,8 @@ export function ProjectsSection() {
 
                 {/* Hover effect overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none" />
-              </div>
-            </motion.div>
+              </motion.div>
+            </CardTilt>
           ))}
         </div>
 
@@ -322,7 +316,7 @@ export function ProjectsSection() {
             href="https://github.com/hemant3991"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 gradient-rainbow text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg glow-primary hover:shadow-xl transition-all duration-300"
+            className="inline-flex items-center gap-3 gradient-rainbow text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg glow-primary hover:shadow-xl transition-all duration-300 interactive-card"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >

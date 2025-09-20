@@ -63,7 +63,7 @@ export function Navigation() {
               >
                 <Link
                   href={item.href}
-                  className="text-foreground hover:text-white transition-all duration-300 px-3 py-2 rounded-md text-sm font-medium relative group"
+                  className="text-foreground hover:text-white transition-all duration-300 px-3 py-2 rounded-md text-sm font-medium relative group interactive-card"
                 >
                   {item.label}
                   <motion.div
@@ -88,7 +88,7 @@ export function Navigation() {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-white transition-all duration-300 p-2 rounded-lg glass hover:bg-white/10 glow-primary"
+                className="text-muted-foreground hover:text-white transition-all duration-300 p-2 rounded-lg glass hover:bg-white/10 glow-primary interactive-card"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -98,7 +98,7 @@ export function Navigation() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-white transition-all duration-300 p-2 rounded-lg glass hover:bg-white/10 glow-secondary"
+                className="text-muted-foreground hover:text-white transition-all duration-300 p-2 rounded-lg glass hover:bg-white/10 glow-secondary interactive-card"
                 whileHover={{ scale: 1.1, rotate: -5 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -106,7 +106,7 @@ export function Navigation() {
               </motion.a>
               <motion.a
                 href="mailto:contact@example.com"
-                className="text-muted-foreground hover:text-white transition-all duration-300 p-2 rounded-lg glass hover:bg-white/10 glow-accent"
+                className="text-muted-foreground hover:text-white transition-all duration-300 p-2 rounded-lg glass hover:bg-white/10 glow-accent interactive-card"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -124,7 +124,7 @@ export function Navigation() {
           >
             <motion.button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg glass hover:bg-white/10 transition-all duration-300"
+              className="p-2 rounded-lg glass hover:bg-white/10 transition-all duration-300 interactive-card"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
