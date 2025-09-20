@@ -46,13 +46,13 @@ export function CursorGradient({ children }: CursorGradientProps) {
           isHovering ? 'opacity-100' : 'opacity-0'
         }`}
         style={{
-          left: mousePosition.x - 150,
-          top: mousePosition.y - 150,
-          width: 300,
-          height: 300,
-          background: 'radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.1) 25%, rgba(236, 72, 153, 0.05) 50%, transparent 70%)',
+          left: mousePosition.x - 200,
+          top: mousePosition.y - 200,
+          width: 400,
+          height: 400,
+          background: 'radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, rgba(139, 92, 246, 0.15) 20%, rgba(236, 72, 153, 0.1) 40%, rgba(34, 197, 94, 0.05) 60%, transparent 80%)',
           transform: 'translate(0, 0)',
-          filter: 'blur(1px)',
+          filter: 'blur(0.5px)',
         }}
       />
     </div>

@@ -71,6 +71,11 @@
   }
 }
 
+/* Custom cursor styles */
+.custom-cursor-hidden {
+  cursor: none;
+}
+
 @layer utilities {
   /* Gradient backgrounds */
   .gradient-primary {
