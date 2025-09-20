@@ -20,10 +20,10 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                 I am a software engineer passionate about building impactful solutions that blend AI, cloud, and full-stack development.
+                I am a software engineer passionate about building impactful solutions that blend AI, cloud, and full-stack development.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                "With experience in React Native, Firebase, MongoDB, and modern web technologies, I’ve developed end-to-end applications ranging from mobile apps to AI-powered platforms.""
+                &ldquo;With experience in React Native, Firebase, MongoDB, and modern web technologies, I&rsquo;ve developed end-to-end applications ranging from mobile apps to AI-powered platforms.&rdquo;
                 </p>
               </div>
               <div className="bg-gradient-to-br from-primary/10 to-secondary/10 p-8 rounded-lg">

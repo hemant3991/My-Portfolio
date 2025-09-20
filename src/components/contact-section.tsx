@@ -168,9 +168,9 @@ export function ContactSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gradient-rainbow">Let's Work Together</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gradient-rainbow">Let&apos;s Work Together</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Ready to bring your ideas to life? Get in touch and let's discuss
+            Ready to bring your ideas to life? Get in touch and let&apos;s discuss
             how we can create something amazing together.
           </p>
           <div className="flex justify-center mt-6">
@@ -193,10 +193,10 @@ export function ContactSection() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-semibold mb-6">Let's Start a Conversation</h3>
+              <h3 className="text-2xl font-semibold mb-6">Let&apos;s Start a Conversation</h3>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                I'm always excited to work on new and challenging projects. Whether you have a
-                specific project in mind or just want to explore possibilities, I'd love to hear from you.
+                I&apos;m always excited to work on new and challenging projects. Whether you have a
+                specific project in mind or just want to explore possibilities, I&apos;d love to hear from you.
               </p>
             </div>
 
@@ -379,7 +379,7 @@ export function ContactSection() {
                     className="flex items-center gap-2 text-green-400 bg-green-500/20 p-3 rounded-lg border border-green-400/30"
                   >
                     <CheckCircle className="h-5 w-5" />
-                    <span className="text-sm">Message sent successfully! I'll get back to you soon.</span>
+                    <span className="text-sm">Message sent successfully! I&apos;ll get back to you soon.</span>
                   </motion.div>
                 )}
               </div>

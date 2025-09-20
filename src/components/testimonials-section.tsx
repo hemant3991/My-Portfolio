@@ -196,7 +196,7 @@ export function TestimonialsSection() {
                 <Quote className="h-8 w-8 text-primary/20 mb-4" />
 
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  "{testimonials[currentTestimonial].content}"
+                  &ldquo;{testimonials[currentTestimonial].content}&rdquo;
                 </p>
 
                 <div className="flex items-center justify-between text-sm text-muted-foreground">

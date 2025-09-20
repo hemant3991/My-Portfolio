@@ -13,8 +13,7 @@ import {
   Smartphone,
   Database,
   Brain,
-  Cloud,
-  Filter
+  Cloud
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 

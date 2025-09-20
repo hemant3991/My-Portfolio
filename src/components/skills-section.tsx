@@ -179,7 +179,7 @@ export function SkillsSection() {
               href="#contact"
               className="glass px-8 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 backdrop-blur-md border border-white/20"
             >
-              Let's Work Together
+              Let&apos;s Work Together
             </a>
           </div>
         </motion.div>

@@ -63,7 +63,7 @@ export function ThemeProvider({
 
     // Debug log
     console.log('Theme initialized:', initialTheme, 'Applied class:', root.classList.contains('dark') ? 'dark' : 'light');
-  }, []);
+  }, [defaultTheme, storageKey]);
 
   const value = {
     theme,

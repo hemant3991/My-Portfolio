@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Download, ArrowRight, ArrowDown } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowDown, Download } from 'lucide-react';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { ThemeToggle } from './theme-toggle';
@@ -138,7 +138,7 @@ export function HeroSection() {
             className="mb-8"
           >
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-4">
-              Hi, I'm{' '}
+              Hi, I&apos;m{' '}
               <AnimatedName />
             </h1>
             <p className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground font-light">
@@ -154,8 +154,8 @@ export function HeroSection() {
             className="mb-8"
           >
             <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            "I build scalable, high-performance applications by combining modern web technologies, cloud computing, and artificial 
-            intelligence. Passionate about solving real-world problems through software innovation."
+            &ldquo;I build scalable, high-performance applications by combining modern web technologies, cloud computing, and artificial
+            intelligence. Passionate about solving real-world problems through software innovation.&rdquo;
             </p>
             <div className="flex justify-center mt-4">
               <div className="flex space-x-2">
