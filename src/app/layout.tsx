@@ -16,6 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Portfolio - Next Generation Developer Showcase",
   description: "A cutting-edge developer portfolio with AI integration, 3D visualizations, and modern web technologies",
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({
