@@ -120,7 +120,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
       <div className="absolute inset-0 gradient-rainbow opacity-5" />
@@ -281,7 +281,7 @@ export function HeroSection() {
           repeat: Infinity,
           ease: 'linear',
         }}
-        className="absolute top-1/4 left-1/4 w-32 h-32 border-2 border-primary/30 rounded-full gradient-primary opacity-20"
+        className="absolute top-1/4 left-1/4 w-32 h-32 border-2 border-primary/30 rounded-full gradient-primary opacity-20 z-0"
       />
       <motion.div
         animate={{
@@ -292,7 +292,7 @@ export function HeroSection() {
           repeat: Infinity,
           ease: 'linear',
         }}
-        className="absolute bottom-1/4 right-1/4 w-24 h-24 border-2 border-secondary/30 rounded-full gradient-secondary opacity-20"
+        className="absolute bottom-1/4 right-1/4 w-24 h-24 border-2 border-secondary/30 rounded-full gradient-secondary opacity-20 z-0"
       />
       <motion.div
         animate={{
@@ -303,7 +303,7 @@ export function HeroSection() {
           repeat: Infinity,
           ease: 'linear',
         }}
-        className="absolute top-1/2 left-1/5 w-16 h-16 border-2 border-accent/30 rounded-full gradient-accent opacity-20"
+        className="absolute top-1/2 left-1/5 w-16 h-16 border-2 border-accent/30 rounded-full gradient-accent opacity-20 z-0"
       />
       <motion.div
         animate={{
@@ -314,7 +314,7 @@ export function HeroSection() {
           repeat: Infinity,
           ease: 'linear',
         }}
-        className="absolute bottom-1/3 left-3/4 w-20 h-20 border-2 border-orange-400/30 rounded-full bg-gradient-to-r from-orange-400/20 to-pink-400/20"
+        className="absolute bottom-1/3 left-3/4 w-20 h-20 border-2 border-orange-400/30 rounded-full bg-gradient-to-r from-orange-400/20 to-pink-400/20 z-0"
       />
     </section>
   );
